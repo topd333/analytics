@@ -1,0 +1,14 @@
+#search.container
+  h1 Example of realtime search box
+  input#searchbox{ type="text"}
+  #analytics
+
+
+#analytics.container
+  h1 Analytics
+  ol.custom-counter
+    - @questions.each do |q,y|
+      li
+        span.question= "#{q.capitalize} ("
+        span.scores= "#{y.to_i.to_s} "
+        span.end searches)
